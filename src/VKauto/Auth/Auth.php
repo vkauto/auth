@@ -4,7 +4,7 @@ namespace VKauto\Auth;
 
 use VKauto\Utils\QueryBuilder;
 use VKauto\Utils\Request;
-use VKauto\Utils\Account;
+use VKauto\Auth\Account;
 
 class Auth
 {
