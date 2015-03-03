@@ -26,6 +26,6 @@ class Auth
 	{
 		$account = Request::VK(QueryBuilder::buildURL('users.get', ['user_id' => 0, 'access_token' => $token]));
 
-		return new Account($token, $account->response->user_id);
+		return $account;
 	}
 }
