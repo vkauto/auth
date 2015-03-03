@@ -21,4 +21,11 @@ class Auth
 
 		return new Account($account->access_token, $account->user_id);
 	}
+
+	public static function byToken($token)
+	{
+		$account = Request::VK(QueryBuilder::buildURL('users.get', ['user_id' => 0, 'access_token' => $token]));
+
+		return new Account($token, $account->response->user_id);
+	}
 }
