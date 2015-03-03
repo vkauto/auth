@@ -17,8 +17,8 @@ class Account
 	public $user_id;
 
 	/**
-	 * Массив, содержащий данные, передающиеся классу Captcha
-	 * @var array
+	 * Класс для работы с сервисами распознавания капчи
+	 * @var VKauto\CaptchaRecognition\Captcha
 	 */
 	public $captcha;
 
