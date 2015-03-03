@@ -8,6 +8,12 @@ use VKauto\Auth\Account;
 
 class Auth
 {
+	/**
+	 * Прямая аутентификация по логину и паролю
+	 * @param  string $login
+	 * @param  string $password
+	 * @return VKauto\Auth\Account
+	 */
 	public static function directly($login, $password)
 	{
 
@@ -22,6 +28,11 @@ class Auth
 		return new Account($account->access_token, $account->user_id);
 	}
 
+	/**
+	 * Получение данных текущего пользователя
+	 * @param  string $token
+	 * @return VKauto\Auth\Account
+	 */
 	public static function byToken($token)
 	{
 		$account = Request::VK(QueryBuilder::buildURL('users.get', ['user_id' => 0, 'access_token' => $token]));
