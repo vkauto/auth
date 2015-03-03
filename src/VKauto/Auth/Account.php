@@ -16,6 +16,12 @@ class Account
 	 */
 	public $user_id;
 
+	/**
+	 * Массив, содержащий данные, передающиеся классу Captcha
+	 * @var array
+	 */
+	public $captcha;
+
 	public function __construct($access_token, $user_id)
 	{
 		$this->access_token = $access_token;
